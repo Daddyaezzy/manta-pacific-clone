@@ -203,6 +203,12 @@ export default function Home() {
     setIsOpenNetwork(!isOpenNetwork);
   };
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // This code runs only in the browser
+      console.log(window.location.href);
+    }
+  }, []);
   // Detects clicks outside the dropdown menu to close it
   const handleClickOutside = (e) => {
     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {

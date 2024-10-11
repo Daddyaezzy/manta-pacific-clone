@@ -564,6 +564,13 @@ export default function Paybis() {
     </div>
   );
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // This code runs only in the browser
+      console.log(window.location.href);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen  bg-[#070B1D] text-white ">
       {/* <div
