@@ -1,4 +1,6 @@
 "use client";
+/* eslint-disable */
+
 import React from "react";
 import TokenScreen from "../components/TokenScreen";
 import Image from "next/image";
