@@ -571,6 +571,32 @@ export default function Paybis() {
     }
   }, []);
 
+  const [imageSize, setImageSize] = useState({ width: 90, height: 90 });
+
+  useEffect(() => {
+    // Check if `window` is available and adjust the size based on window width
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        if (window.innerWidth > 500) {
+          setImageSize({ width: 154, height: 154 });
+        } else {
+          setImageSize({ width: 90, height: 90 });
+        }
+      };
+
+      // Set the initial size
+      handleResize();
+
+      // Add event listener to handle window resize
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
   return (
     <div className="min-h-screen  bg-[#070B1D] text-white ">
       {/* <div
@@ -586,7 +612,7 @@ export default function Paybis() {
             backgroundSize: "contain",
             backgroundPosition: "center",
             // width: "100%",
-            width: window.width > 500 ? "100%" : "60%",
+            width: "60%",
             // height: "100%",
           }}
           className="fixed bg-[#070B1D] left-[-80px] inset-0 bg-[url('/img/Paybis Partner/paybis-bg.svg')] bg-no-repeat bg-left bg-cover"
@@ -597,8 +623,8 @@ export default function Paybis() {
             <Image
               src="/img/Paybis Partner/paybis-logo.svg"
               alt="Manta Pacific Logo"
-              width={window.width > 500 ? 154 : 90}
-              height={window.width > 500 ? 154 : 90}
+              width={imageSize.width}
+              height={imageSize.height}
             />
           </header>
           <main className="flex-grow p-4 md:p-8 flex flex-col md:flex-row justify-between items-start">
