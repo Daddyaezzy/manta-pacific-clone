@@ -101,7 +101,7 @@ export default function CryptoSwap() {
   };
 
   const renderMainScreen = () => (
-    <div className="bg-white rounded-3xl">
+    <div className="bg-white rounded-3xl md:w-[408px] w-[80%]">
       <div className="flex mb-6">
         <button
           className={`flex-1 py-4 w-full rounded-tl-3xl text-lg font-semibold ${
@@ -124,7 +124,7 @@ export default function CryptoSwap() {
           Sell
         </button>
       </div>
-      <div className="px-6 pb-6  text-black relative rounded-lg h-[450px] shadow-lg w-[408px] mx-auto">
+      <div className="px-6 pb-6  text-black relative rounded-lg lg:h-[450px] h-[350px] shadow-lg  mx-auto">
         <div className="">
           <div className="relative">
             <p className="text-sm p-[1px] left-2 top-[-14px] absolute  bg-white text-teal-500 mb-1">
@@ -297,11 +297,11 @@ export default function CryptoSwap() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div className="h-[100vh] bg-gray-100 flex items-center justify-center p-4">
       {currentScreen === "main"
         ? renderMainScreen()
         : renderCurrencySelection()}
-      <div className="absolute bottom-4 right-4 text-black cursor-pointer flex items-center gap-2 px-5 py-2 rounded-3xl bg-teal-500">
+      <div className="absolute md:text-lg text-sm bottom-2 right-4 text-black cursor-pointer flex items-center gap-2 md:px-5 px-2 py-1 md:py-2 rounded-3xl bg-teal-500">
         <div className="p-1 rounded-full border h-5 w-5 flex items-center justify-center border-black">
           ?
         </div>

@@ -140,13 +140,13 @@ export default function Paybis() {
                 <label className="block text-sm font-medium mb-1">
                   You spend
                 </label>
-                <div className="flex justify-between w-[380px]">
+                <div className="flex justify-between md:w-[380px] w-[300px]">
                   <div className="border-2 flex w-full p-1 border-black rounded-md">
                     <input
                       type="number"
                       value={spendAmount}
                       onChange={(e) => setSpendAmount(e.target.value)}
-                      className="p-2  focus:outline-none placeholder-gray-500 font-bold text-black"
+                      className="p-2 md:w-[58%] w-[50%]  focus:outline-none placeholder-gray-500 font-bold text-black"
                     />
                     <button
                       onClick={() => setCurrentScreen("selectPaymentMethod")}
@@ -171,7 +171,7 @@ export default function Paybis() {
             <label className="block text-sm font-medium mb-1">
               You receive
             </label>
-            <div className="flex justify-between w-[380px]">
+            <div className="flex justify-between md:w-[380px] w-[300px]">
               <div className="border-2 flex justify-between w-full p-1 border-black rounded-md">
                 <input
                   type="number"
@@ -627,7 +627,7 @@ export default function Paybis() {
               height={imageSize.height}
             />
           </header>
-          <main className="flex-grow p-4 md:p-8 flex flex-col md:flex-row justify-between items-start">
+          <main className="flex-grow p-4 md:p-8 flex flex-col md:flex-row md:justify-between justify-center md:items-start">
             <div className="md:w-1/2 flex items-center justify-center md:mt-[52px] mb-8 md:mb-0">
               <div className="">
                 <h1 className="text-[60px] text-center font-bold mb-4">

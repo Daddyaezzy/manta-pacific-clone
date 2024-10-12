@@ -244,7 +244,7 @@ export default function Home() {
               onClick={() => setIsBarOpen(!isBarOpen)}
               className="md:hidden block"
             >
-              {isBarOpen ? <Menu /> : <X />}
+              {!isBarOpen ? <Menu /> : <X />}
             </div>
             <nav
               ref={dropdownRef}
@@ -260,7 +260,9 @@ export default function Home() {
                 <div
                   className={`${
                     isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0"
-                  } transform transition-all z-[30] duration-300 ease-out origin-top-right absolute right-0 mt-3 w-[130px] rounded-lg shadow-lg bg-white`}
+                  } transform transition-all z-[30] duration-300 ease-out origin-top-right absolute right-0 mt-3 ${
+                    isBarOpen && "hidden"
+                  } w-[130px] rounded-lg shadow-lg bg-white`}
                 >
                   <ul className="py-1">
                     <li
@@ -310,7 +312,7 @@ export default function Home() {
                     isOpenNetwork
                       ? "scale-100 opacity-100"
                       : "scale-0 opacity-0"
-                  } transform transition-all z-[30] duration-300 ease-out origin-top-right absolute right-0 mt-3 w-[150px] rounded-lg shadow-lg bg-white`}
+                  } transform transition-all z-[30] duration-300 ease-out origin-top-right absolute right-0 mt-3  w-[150px] rounded-lg shadow-lg bg-white`}
                 >
                   <ul className="py-1">
                     <li
@@ -367,7 +369,7 @@ export default function Home() {
               Connect Wallet
             </button>
           </div>
-          {!isBarOpen && (
+          {isBarOpen && (
             <div className="md:hidden block py-4 font-semibold">
               <div className="relative">
                 <div
@@ -379,7 +381,7 @@ export default function Home() {
                 <div
                   className={`${
                     isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0"
-                  } transform transition-all z-[30] duration-300 ease-out origin-top-right absolute right-0 mt-3 w-[130px] rounded-lg shadow-lg bg-white`}
+                  } transform transition-all z-[30] duration-300 ease-out origin-top-right absolute left-0 mt-3 w-[130px] rounded-lg shadow-lg bg-white`}
                 >
                   <ul className="py-1">
                     <li

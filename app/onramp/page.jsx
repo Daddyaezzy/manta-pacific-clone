@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Onramp = () => {
   return (
-    <div className="min-h-screen px-3 text-black bg-white">
+    <div className="min-h-screen md:px-3 text-black bg-white">
       {/* Header */}
       <header className="container mx-auto px-4 py-[55px] ">
         <div className="flex items-center justify-center space-x-2">
@@ -21,7 +21,7 @@ const Onramp = () => {
       </header>
 
       {/* Main content */}
-      <main className="container mx-auto px-[100px] pt-12">
+      <main className="container mx-auto md:px-[100px] px-4 pt-12">
         <div className=" ">
           {/* Right column */}
           <div className="md:flex justify-between items-center gap-[60px]">
@@ -127,11 +127,11 @@ const Onramp = () => {
 
       {/* Footer */}
       <footer className="bg-gray-100 pb-12 pt-[90px]    bottom-0 w-full">
-        <div className="container mx-auto px-[100px]">
+        <div className="container md:mx-auto md:px-[100px] px-4 md:text-lg text-[12px]">
           <h3 className="text-lg font-semibold mb-5 text-center uppercase">
             Manta Socials
           </h3>
-          <div className="flex justify-between pb-[50px] space-x-8">
+          <div className="flex md:flex-row flex-col md:justify-between justify-center items-center pb-[50px] ">
             <a href="#" className="text-[#595f68] hover:underline">
               Manta Network website
             </a>
