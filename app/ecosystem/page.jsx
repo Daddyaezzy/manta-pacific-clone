@@ -581,7 +581,7 @@ export default function Component() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              onClick={() => window.open("/atlantic", "_blank")}
+              onClick={() => window.open("/atlantic/bridge", "_blank")}
             >
               Bridge to Atlantic
             </button>
@@ -742,7 +742,7 @@ export default function Component() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              onClick={() => window.open("/atlantic", "_blank")}
+              onClick={() => window.open("/atlantic/bridge", "_blank")}
             >
               Bridge to Atlantic
             </button>

@@ -79,6 +79,7 @@ export default function MantaBridge() {
   const [selectedNetwork, setSelectedNetwork] = useState(networks[0]);
   const [fromOption, setFromOption] = useState(mantaOptions[0]);
   const [toOption, setToOption] = useState(mantaOptions[1]);
+  const [activeTab, setActiveTab] = useState("Bridge");
   const [amount, setAmount] = useState("0.00");
 
   const handleNetworkChange = (network) => {
@@ -131,10 +132,22 @@ export default function MantaBridge() {
               </SelectContent>
             </Select>
             <nav className="hidden md:flex gap-[50px]">
-              <a href="#" className="text-blue-600 font-medium">
+              <a
+                onClick={() => setActiveTab("Bridge")}
+                href="#"
+                className={`${
+                  activeTab === "Bridge" ? "text-blue-600" : "text-gray-600"
+                }  font-medium`}
+              >
                 Bridge
               </a>
-              <a href="/staking" className="text-gray-600 hover:text-blue-500">
+              <a
+                onClick={() => setActiveTab("Staking")}
+                href="/atlantic/staking"
+                className={`${
+                  activeTab === "Staking" ? "text-blue-600" : "text-gray-600"
+                }  font-medium`}
+              >
                 Staking
               </a>
               <a
