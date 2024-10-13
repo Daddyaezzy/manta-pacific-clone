@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Menu, X } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 // import { Card } from "@/components/ui/card";
 
@@ -215,7 +215,7 @@ const projects = [
     website: "https://karatdao.com/",
     description:
       "Karat DAO is building a decentralized credit score that quantifies lending risk at scale, bringing trust and transparency to web3",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/karatdao-logo.png",
 
     liveOnAtlantic: true,
   },
@@ -225,14 +225,14 @@ const projects = [
     website: "https://hypersphere.capital/",
     description:
       "Hypersphere is an investment group leveraging on-chain treasuries, decentralized communities, and deep crypto expertise.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/hypersphere-logo.png",
   },
   {
     name: "Instap",
     categories: ["Social"],
     website: "https://instap.io/",
     description: "Make friends, Earn Crypto. The Ultimate Web3 Social Network.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/instap-logo.png",
   },
   {
     name: "Jump Crypto",
@@ -240,7 +240,7 @@ const projects = [
     website: "https://jumpcrypto.com/",
     description:
       "Jump Crypto is committed to building and standing up critical infrastructure needed to catalyze the growth of the crypto ecosystem.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/jump-crypto-logo.png",
   },
   {
     name: "Caldera",
@@ -248,7 +248,7 @@ const projects = [
     website: "https://caldera.xyz/",
     description:
       "The modular blockchain platform: deploy a rollup in one click.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/Caldera.png",
 
     liveOnPacific: true,
   },
@@ -258,7 +258,7 @@ const projects = [
     website: "https://www.celer.network/",
     description:
       "Building the best inter-blockchain and cross-layer communication platform.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/CelerNetwork.png",
 
     liveOnPacific: true,
   },
@@ -268,7 +268,7 @@ const projects = [
     website: "https://clover.finance/",
     description:
       "A wallet created for the next 100M crypto users with user privacy as a cornerstone. Provides a full range of multi-chain & cross-chain solutions.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/clover-logo.png",
   },
   {
     name: "CoinFund",
@@ -276,7 +276,7 @@ const projects = [
     website: "https://www.coinfund.io/",
     description:
       "CoinFund is a cryptonative investment firm and registered investment adviser. The team specializes in portfolio management, token design, decentralized network research, trading, market structure, engineering, brand strategy, law, and regulation.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/coinfund-logo.png",
   },
   {
     name: "Continue Capital",
@@ -284,7 +284,7 @@ const projects = [
     website: "https://continue.capital/",
     description:
       "We invest in crypto startups that will bring the next 1 billion users to the web 3.0 economy.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/continuecapital-logo.png",
   },
   {
     name: "Celestia",
@@ -292,7 +292,7 @@ const projects = [
     website: "https://celestia.org/",
     description:
       "Celestia is a modular consensus and data network, built to enable anyone to easily deploy their own blockchain with minimal overhead.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/celestia-logo.png",
   },
   {
     name: "Cointelegraph",
@@ -300,7 +300,7 @@ const projects = [
     website: "https://cointelegraph.com/",
     description:
       "Cointelegraph is the leading independent digital media resource covering a wide range of news on blockchain technology, crypto assets, and emerging fintech trends.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/cointelegraph-logo.png",
   },
   {
     name: "Cred Protocol",
@@ -308,7 +308,7 @@ const projects = [
     website: "https://www.cred.xyz/",
     description:
       "Cred Protocol is a decentralized credit score that quantifies lending risk at scale, bringing trust and transparency to web3",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/cred-logo.jpg",
 
     liveOnAtlantic: true,
   },
@@ -318,7 +318,7 @@ const projects = [
     website: "https://www.7xvc.com/",
     description:
       "SevenX Ventures is a Research-driven Crypto Venture Capital founded in 2020.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/seven-x-logo.jpeg",
   },
   {
     name: "Qiming Venture",
@@ -326,7 +326,7 @@ const projects = [
     website: "https://www.qimingvc.com/",
     description:
       "Qiming Venture Partners is a top-tier VC firm with outstanding reputation.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/qiming-logo.jpeg",
   },
   {
     name: "BingoOx",
@@ -334,7 +334,7 @@ const projects = [
     website: "https://bingoox.com/",
     description:
       "A casual competition platform where players can compete with each other and win stablecoins and other cryptocurrencies.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/Bingo0x.png",
 
     liveOnPacific: true,
   },
@@ -344,7 +344,7 @@ const projects = [
     website: "https://cmsholdings.io/",
     description:
       "CMS is a principal investment firm focused on making investments across the cryptoasset ecosystem. We look to deploy capital in liquid and illiquid crypto tokens, as well as, equity stakes in selective companies.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/cms-logo.png",
   },
   {
     name: "LongHashX",
@@ -352,7 +352,7 @@ const projects = [
     website: "https://longhashx.com/",
     description:
       "LongHash Ventures specializes in bootstrapping Web3 ecosystems.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/long-hash-logo.png",
   },
   {
     name: "Longhash Ventures",
@@ -360,21 +360,21 @@ const projects = [
     website: "https://www.longhash.vc/",
     description:
       "Longhash Ventures specializes in bootstrapping Web3 ecosystems.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/long-hash-logo.png",
   },
   {
     name: "Kevin Hu (BH Digital)",
     categories: ["Investors"],
     website: "https://www.linkedin.com/in/kevin-hu-75699719/",
     description: "Angel investor at BH Digital. Formerly at Dragonfly Capital.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/kevinhu-logo.png",
   },
   {
     name: "Let's Meme",
     categories: ["Social"],
     website: "https://letsmeme.com/",
     description: "Let's Meme is a degen web3 community management tool.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/letsmeme-logo.png",
   },
   {
     name: "Moonshot Commons",
@@ -382,7 +382,7 @@ const projects = [
     website: "https://www.moonshotcommons.com/",
     description:
       "Where top Gen-Z engineers learn, build, and scale from 0 to ∞.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/moonshot-logo.png",
   },
   {
     name: "Moonbeam",
@@ -390,7 +390,7 @@ const projects = [
     website: "https://moonbeam.network/",
     description:
       "Moonbeam, an Ethereum-compatible smart contract parachain on Polkadot.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/moonbeam-logo.png",
   },
   {
     name: "Moonrock Capital",
@@ -398,14 +398,14 @@ const projects = [
     website: "https://www.moonrockcapital.io/",
     description:
       "Moonrock Capital is a crypto native advisory and venture capital firm incubating and accelerating blockchain and web3 startups.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/moonrock-logo.png",
   },
   {
     name: "Maple Leaf Capital",
     categories: ["Investors"],
     website: "https://www.mapleleafcap.com/",
     description: "Founder of Folius Ventures.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/mapleleaf-logo.png",
   },
   {
     name: "OpenZL",
@@ -413,7 +413,7 @@ const projects = [
     website: "https://openzl.org/",
     description:
       "OpenZL is an open-source library for development of secure, high-performance, zero-knowledge applications.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/openzl-logo.png",
 
     liveOnAtlantic: true,
   },
@@ -423,7 +423,7 @@ const projects = [
     website: "https://www.optimism.io/",
     description:
       "OP Pacific is a Layer 2 Optimistic Rollup network designed to utilize the strong security guarantees of Ethereum while reducing its cost and latency.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/optimism-logo.jpg",
 
     liveOnAtlantic: true,
   },
@@ -440,7 +440,7 @@ const projects = [
     categories: ["zkSBT Partner"],
     website: "https://www.azuki.com/",
     description: "A brand for the metaverse, built by the community.",
-    image: "/img/Ecosystem/aspecta-logo.jpeg",
+    image: "/img/Ecosystem/azuki-logo.jpeg",
 
     liveOnAtlantic: true,
   },
@@ -448,11 +448,157 @@ const projects = [
 
 export default function Component() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [activeMenu, setActiveMenu] = useState("Ecosystem");
+  const [showSide, setShowSide] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
 
   return (
     <div className=" bg-white">
-      <header className="  p-6 bg-white">
-        <div className="flex items-center justify-between">
+      {showSide && (
+        <div className="bg-white/90 p-4 overflow-y-scroll h-full absolute w-full  z-[99]">
+          <X
+            onClick={() => setShowSide(false)}
+            className="absolute top-7 md:hidden block cursor-pointer left-5 text-black"
+            size={30}
+          />
+          <div className="mt-[100px] flex flex-col text-lg text-black items-center justify-center gap-4">
+            <a href="#" className={`text-purple-500 hover:text-gray-900`}>
+              Ecosystem
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Developers
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Documentation
+            </a>
+            <p className={`text-black font-semibold hover:text-gray-900`}>
+              Explorers
+            </p>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Blockscout
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Socialscan
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              OKLink
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Dex Screener
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              GeckoTerminal
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Dex Guru
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Blio
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Coinmarket Cap
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Route Scan
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              VfatScan
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Arkham
+            </a>
+            <p className={`text-black font-semibold hover:text-gray-900`}>
+              On-Chain Data
+            </p>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              DefiLiama
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Dune
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              L2BEAT
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Web3Go
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Token Terminal
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Arkham
+            </a>
+
+            <a
+              onClick={() =>
+                window.open("https://foundation.manta.network/", "_blank")
+              }
+              href="#"
+              className={`text-black hover:text-gray-900`}
+            >
+              Foundation
+            </a>
+            <a href="#" className={`text-black hover:text-gray-900`}>
+              Learn
+            </a>
+          </div>
+
+          <div className="md:hidden flex px-4 gap-2">
+            <img
+              src="/img/Bridge - Manta Pacific/medium-icon.svg"
+              alt="Manta Pacific Logo"
+              className="w-[44px]"
+            />{" "}
+            <img
+              src="/img/Bridge - Manta Pacific/twitter-icon.svg"
+              alt="Manta Pacific Logo"
+              className="w-[44px]"
+            />{" "}
+            <img
+              src="/img/Bridge - Manta Pacific/discord-icon.svg"
+              alt="Manta Pacific Logo"
+              className="w-[44px]"
+            />{" "}
+          </div>
+
+          <div className=" px-4 pt-9 gap-4">
+            <button
+              className="block text-white w-full mt-2 font-medium py-2 px-3 rounded-3xl md:hidden"
+              style={{
+                backgroundImage: "url('/img/Ecosystem/header-button-bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              onClick={() => window.open("/", "_blank")}
+            >
+              Bridge to Pacific
+            </button>
+            <button
+              className="block text-white w-full mt-2 font-medium py-2 px-3 rounded-3xl md:hidden"
+              style={{
+                backgroundImage: "url('/img/Ecosystem/bridge-to-altantic.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              Bridge to Atlantic
+            </button>
+            <button className="text-[#3b80b0] w-full mt-2 md:hidden block border border-[#3b80b0] py-2 px-3 rounded-3xl">
+              Stake Manta
+            </button>
+          </div>
+
+          <div></div>
+        </div>
+      )}
+      <header className=" relative px-6 bg-white">
+        <Menu
+          onClick={() => setShowSide(true)}
+          className="absolute top-7 md:hidden block cursor-pointer left-5 text-black"
+          size={30}
+        />
+        <div className="flex items-center md:justify-between justify-center">
           <img
             src="/img/Ecosystem/logo.svg"
             alt="Manta Network Logo"
@@ -460,24 +606,103 @@ export default function Component() {
           />
           <nav className="hidden md:flex gap-7">
             <div className="flex gap-6">
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a
+                href="#"
+                className={`text-purple-500 py-6 hover:text-gray-900`}
+              >
                 Ecosystem
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Developers
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Networks
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <div
+                onMouseEnter={() => setIsOpen(true)}
+                onMouseLeave={() => setIsOpen(false)}
+                className="py-6 relative "
+              >
+                <a href="#" className={`text-gray-600  hover:text-gray-900`}>
+                  Developers
+                </a>
+                {isOpen && (
+                  <div
+                    className="absolute left-0 top-[60px] mt-2 w-[150px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    onMouseEnter={() => setIsOpen(true)}
+                    onMouseLeave={() => setIsOpen(false)}
+                  >
+                    <div className="py-1 text-center">
+                      {[
+                        "Documentation",
+                        "Explorers",
+                        "Blockscout",
+                        "SocialScan",
+                        "OKLink",
+                        "DEX Screener",
+                        "GeckoTerminal",
+                        "Dex Guru",
+                        "Blio",
+                        "CoinMarketCap",
+                        "RouteScan",
+                        "VfatScan",
+                        "Arkham",
+                        "On-chain Data",
+                        "DefiLlama",
+                        "Dune",
+                        "L2BEAT",
+                        "Web3Go",
+                        "Token Terminal",
+                      ].map((item, index) => (
+                        <a
+                          key={index}
+                          href="#"
+                          className="block px-4 py-2 text-center text-sm text-black hover:bg-gray-100"
+                        >
+                          {item}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <a
+                onClick={() =>
+                  window.open("https://foundation.manta.network/", "_blank")
+                }
+                href="#"
+                className={`text-gray-600 py-6 hover:text-gray-900`}
+              >
                 Foundation
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                Learn
-              </a>
+              <div
+                onMouseEnter={() => setIsOpen2(true)}
+                onMouseLeave={() => setIsOpen2(false)}
+                className="py-6 relative "
+              >
+                <a href="#" className={`text-gray-600  hover:text-gray-900`}>
+                  Learn
+                </a>
+                {isOpen2 && (
+                  <div
+                    className="absolute left-0 top-[60px] mt-2 w-[150px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    onMouseEnter={() => setIsOpen(true)}
+                    onMouseLeave={() => setIsOpen(false)}
+                  >
+                    <div className="py-1 text-center">
+                      {["Tokenomics", "About Manta", "Career"].map(
+                        (item, index) => (
+                          <a
+                            key={index}
+                            href="#"
+                            className="block px-4 py-2 text-center text-sm text-black hover:bg-gray-100"
+                          >
+                            {item}
+                          </a>
+                        )
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
             <div>
-              <div className="md:flex hidden gap-2">
+              <div className="md:flex hidden py-6 gap-2">
                 <img
                   src="/img/Bridge - Manta Pacific/medium-icon.svg"
                   alt="Manta Pacific Logo"
@@ -519,7 +744,7 @@ export default function Component() {
             >
               Bridge to Atlantic
             </button>
-            <button className="text-[#3b80b0] border border-[#3b80b0] py-2 px-3 rounded-3xl">
+            <button className="text-[#3b80b0] md:block hidden border border-[#3b80b0] py-2 px-3 rounded-3xl">
               Stake Manta
             </button>
           </div>
@@ -613,9 +838,9 @@ export default function Component() {
 
         <section className="  ">
           <div className="bg-[#fff] ">
-            <div className="flex bg-[#eef6fa] container mx-auto  rounded-[40px] gap-[200px] py-[55px] px-12 text-black  relative items-center mb-4">
-              <h2 className="text-[45px] font-normal">
-                Ecosystem <br /> Grants
+            <div className="lg:flex bg-[#eef6fa] container mx-auto  rounded-[40px] gap-[200px] py-[55px] px-12 text-black  relative items-center mb-4">
+              <h2 className="text-[45px] text-center font-normal">
+                Ecosystem <br className="md:block hidden" /> Grants
               </h2>
 
               <button className=" font-semibold flex items-center gap-4 p-6 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 text-white">
@@ -624,7 +849,7 @@ export default function Component() {
                   <ArrowRight size={12} className="text-white " />
                 </div>
               </button>
-              <div className="absolute bottom-[-60px] right-[30px]">
+              <div className="absolute lg:block hidden bottom-[-60px] right-[30px]">
                 <img
                   src="/img/Ecosystem/ecosystem-grants.png"
                   alt="Manta Network Logo"
@@ -633,14 +858,11 @@ export default function Component() {
               </div>
             </div>
           </div>
-          <div className="mt-[75px] px-[100px] bg-[#eef6fa]">
+          <div className="mt-[75px] md:px-[100px] px-10 bg-[#eef6fa]">
             <div className="flex pt-12 flex-wrap gap-2 mb-4">
               {categories.map((category) => (
                 <button
                   key={category}
-                  variant={
-                    selectedCategory === category ? "default" : "outline"
-                  }
                   onClick={() => setSelectedCategory(category)}
                   className="rounded-full text-white px-4 py-1 text-sm bg-gradient-to-r  from-teal-400 to-blue-500"
                 >
@@ -648,17 +870,17 @@ export default function Component() {
                 </button>
               ))}
             </div>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-black gap-4">
+            <div className="mt-12 columns-1 sm:columns-2 lg:columns-3  text-black gap-4">
               {projects
                 .filter(
                   (project) =>
                     selectedCategory === "All" ||
-                    project.category === selectedCategory
+                    project.categories.includes(selectedCategory)
                 )
                 .map((project, index) => (
                   <div
                     key={index}
-                    className="p-4 bg-white rounded-3xl relative"
+                    className="break-inside-avoid  mb-4 border p-4 bg-white rounded-3xl relative"
                   >
                     {project.liveOnPacific && (
                       <span className="flex items-center gap-1  absolute top-4 right-3 text-black text-xs px-2 py-1 rounded-full">
