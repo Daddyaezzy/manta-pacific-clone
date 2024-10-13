@@ -293,9 +293,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                onClick={() =>
-                  window.open("https://manta.network/ecosystem.html", "_blank")
-                }
+                onClick={() => window.open("/ecosystem", "_blank")}
                 className=" md:block hidden py-2 cursor-pointer rounded-[10px] hover:bg-[#f4f7fa] px-4"
               >
                 Ecosystem
@@ -412,9 +410,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                onClick={() =>
-                  window.open("https://manta.network/ecosystem.html", "_blank")
-                }
+                onClick={() => window.open("/ecosystem", "_blank")}
                 className=" md:hidden block py-2 cursor-pointer rounded-[10px] hover:bg-[#f4f7fa] px-4"
               >
                 Ecosystem
