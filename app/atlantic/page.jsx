@@ -32,6 +32,15 @@ const mantaOptions = [
 ];
 
 const calamariOptions = [
+  { name: "Calamari", logo: "/img/atlantic/download (6).svg" },
+  { name: "Kusama", logo: "/img/atlantic/download (1).svg" },
+];
+const mantaOptions2 = [
+  { name: "Manta ", logo: "/img/atlantic/manta.png" },
+  { name: "Manta ", logo: "/img/atlantic/manta.png" },
+];
+
+const calamariOptions2 = [
   { name: "Calamari", logo: "/placeholder.svg?height=24&width=24" },
   { name: "Kusama", logo: "/placeholder.svg?height=24&width=24" },
 ];
@@ -40,29 +49,29 @@ const ecosystemOptions = [
   {
     name: "Staking",
     description: "Stake your $MANTA to secure the network and earn rewards",
-    logo: "/placeholder.svg?height=40&width=40",
+    logo: "/img/atlantic/manta-stake.ddb9844a.png",
   },
   {
     name: "MantaDEX",
     description: "Swap and provide liquidity on MantaDex",
-    logo: "/placeholder.svg?height=40&width=40",
+    logo: "/img/atlantic/manta-dex.png",
   },
   {
     name: "StellaSwap",
     description:
       "Provide liquidity on Moonbeam network ($MANTA token contract on Moonbeam: 0xfFf...)",
-    logo: "/placeholder.svg?height=40&width=40",
+    logo: "/img/atlantic/stella.fa61f674.webp",
   },
   {
     name: "JumboShrimps",
     description:
       "Deposit $MANTA for a chance to win the entire staking reward pool",
-    logo: "/placeholder.svg?height=40&width=40",
+    logo: "/img/atlantic/jumbo-shrimps.be05180a.png",
   },
   {
     name: "Bifrost",
     description: "Earn rewards by staking $MANTA and free up your liquidity",
-    logo: "/placeholder.svg?height=40&width=40",
+    logo: "/img/atlantic/bifrost.png",
   },
 ];
 
@@ -99,11 +108,11 @@ export default function MantaBridge() {
               }
             >
               <SelectTrigger className="w-[180px] border-none shadow-none">
-                <img
+                {/* <img
                   src={selectedNetwork.logo}
                   alt={selectedNetwork.name}
                   className="w-6 h-6 mr-2"
-                />
+                /> */}
                 <SelectValue placeholder={selectedNetwork.name} />
               </SelectTrigger>
               <SelectContent>
@@ -115,7 +124,7 @@ export default function MantaBridge() {
                         alt={network.name}
                         className="w-6 h-6 mr-2"
                       />
-                      <span className={network.color}>{network.name}</span>
+                      <span>{network.name}</span>
                     </div>
                   </SelectItem>
                 ))}
@@ -125,13 +134,25 @@ export default function MantaBridge() {
               <a href="#" className="text-blue-600 font-medium">
                 Bridge
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="/staking" className="text-gray-600 hover:text-blue-500">
                 Staking
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a
+                onClick={() =>
+                  window.open("https://forum.manta.network/", "_blank")
+                }
+                href="#"
+                className="text-gray-600 hover:text-blue-500"
+              >
                 Govern
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a
+                onClick={() =>
+                  window.open("https://calamari.subscan.io/", "_blank")
+                }
+                href="#"
+                className="text-gray-600 hover:text-blue-500"
+              >
                 Block Explorer
               </a>
             </nav>
@@ -155,6 +176,7 @@ export default function MantaBridge() {
       </header>
 
       <div
+        onClick={() => window.open("https://cedefi.manta.network/", "_blank")}
         style={{
           backgroundImage: "url('/img/atlantic/bounce-banner.397e2898.png')",
           backgroundSize: "cover",
@@ -176,9 +198,21 @@ export default function MantaBridge() {
       </div>
 
       <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
-          <Card className="flex-1 p-6  bg-[#f4f7fe]">
-            <h2 className="text-2xl font-bold mb-4">Bridge</h2>
+        <div
+          className={`${
+            selectedNetwork.name === "Calamari Network"
+              ? "justify-center items-center"
+              : "items-start"
+          } flex flex-col  lg:flex-row gap-8`}
+        >
+          <Card
+            className={`${
+              selectedNetwork.name === "Calamari Network"
+                ? "w-[45%]"
+                : " flex-1"
+            }  p-6  bg-[#f4f7fe] `}
+          >
+            {/* <h2 className="text-2xl font-bold mb-4">Bridge</h2> */}
             <div className="space-y-4">
               <div className="flex  justify-between items-center">
                 <div className="w-[40%]  p-3 rounded-xl bg-white">
@@ -259,27 +293,68 @@ export default function MantaBridge() {
                   </Select>
                 </div>
               </div>
-              <div className="bg-white">
-                <div>
-                  <Input
+              <div className="bg-white px-2 py-4 flex  justify-between items-center">
+                <div className="">
+                  <input
                     type="number"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
-                    className="w-full"
+                    className="w-full focus:outline-none"
                     placeholder="0.00"
                   />
-                  <p className="text-sm text-left text-green-400 mt-1 cursor-pointer">
+                  <p className="text-lg text-left text-green-400 mt-1 cursor-pointer">
                     Select Max
                   </p>
                 </div>
-                <div></div>
+                <div>
+                  <Select
+                    value={toOption.name}
+                    onValueChange={(value) =>
+                      setToOption(
+                        mantaOptions.find((o) => o.name === value) ||
+                          calamariOptions.find((o) => o.name === value)
+                      )
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {(selectedNetwork.name === "Manta Network"
+                        ? mantaOptions
+                        : calamariOptions
+                      ).map((option) => (
+                        <SelectItem key={option.name} value={option.name}>
+                          <div className="flex items-center">
+                            <img
+                              src={option.logo}
+                              alt={option.name}
+                              className="w-6 h-6 mr-2"
+                            />
+                            <span>{option.name}</span>
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <p className="mt-1 text-right">Balance: --</p>
+                </div>
               </div>
               {selectedNetwork.name === "Manta Network" && (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Enter Manta Atlantic Address
-                  </label>
-                  <Input type="text" className="w-full" />
+                <div className="flex gap-3">
+                  <div className="bg-white w-full p-1">
+                    <input
+                      type="text"
+                      placeholder="Enter Manta Atlantic Address"
+                      className="w-full border-transparent bg-transparent p-4 rounded-lg"
+                    />
+                  </div>
+                  <Button
+                    variant="default"
+                    className="bg-gradient-to-r from-blue-500 to-purple-500 py-8 px-10  text-white"
+                  >
+                    Connect Wallet
+                  </Button>
                 </div>
               )}
               {selectedNetwork.name === "Calamari Network" && (
@@ -294,9 +369,7 @@ export default function MantaBridge() {
                   </div>
                 </div>
               )}
-              <Button className="w-full bg-blue-600 text-white">
-                Connect Wallet
-              </Button>
+
               {selectedNetwork.name === "Manta Network" && (
                 <div className="flex items-start space-x-2">
                   <Checkbox id="terms" />
@@ -309,18 +382,24 @@ export default function MantaBridge() {
                   </label>
                 </div>
               )}
+              <Button className="w-full py-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                Connect Wallet
+              </Button>
             </div>
           </Card>
 
           {selectedNetwork.name === "Manta Network" && (
-            <Card className="lg:w-1/3 p-6 bg-[#f4f7fe]">
+            <Card className="lg:w-[38%] p-6 rounded-lg bg-[#f4f7fe]">
               <h2 className="text-2xl font-bold mb-4">Explore Ecosystem</h2>
               <p className="text-sm text-gray-600 mb-4">
                 Explore Manta Atlantic Ecosystem instead of bridge out:
               </p>
               <div className="space-y-4">
                 {ecosystemOptions.map((option) => (
-                  <div key={option.name} className="flex items-start space-x-3">
+                  <div
+                    key={option.name}
+                    className="flex bg-white rounded-lg p-3 items-start space-x-3"
+                  >
                     <img
                       src={option.logo}
                       alt={option.name}
