@@ -134,19 +134,15 @@ export default function MantaBridge() {
             <nav className="hidden md:flex gap-[50px]">
               <a
                 onClick={() => setActiveTab("Bridge")}
-                href="#"
-                className={`${
-                  activeTab === "Bridge" ? "text-blue-600" : "text-gray-600"
-                }  font-medium`}
+                href="/atlantic/bridge"
+                className={`text-gray-600 font-light`}
               >
                 Bridge
               </a>
               <a
                 onClick={() => setActiveTab("Staking")}
                 href="/atlantic/staking"
-                className={`${
-                  activeTab === "Staking" ? "text-blue-600" : "text-gray-600"
-                }  font-medium`}
+                className={`text-gray-600 font-light`}
               >
                 Staking
               </a>
